@@ -2,86 +2,126 @@
 <head>
 	<title>둔미의 HTML</title>
 	<meta charset ="utf-8">
+	<style>
+		body{
+			margin:0px;
+			margin-left: 10px;
+		}
+		a {
+			color:black;
+			text-decoration: none;
+		}
+		h1{
+			text-align: center;
+			border-bottom:1px gray solid;
+			margin:0px;
+			padding:20px;
+		}
+		/* grid 인 부모를 가진 ol 만 적용!!!!!*/
+		#grid ol{
+			border-right:gray solid 1px;
+			width:150px;
+			margin:0px;
+			padding:20px;
+			padding-left: 40px;
+		}
+		div{
+			/*border: 4px solid gray;*/
+		}
+		#grid{
+			/* border:4px solid pink; */
+			display:grid;
+			grid-template-columns: 200px 1fr;
+		}
+		
+		#article{
+			padding-left:40px;
+		}
+	</style>
 </head>
 
 <body>
-<h1><a href ="index.html">HTML 배우기</a></h1>
-<ol>
-	<li><a href ="1.html"> html 기초</a></li>
-	<li><a href ="2.html"> Tag (문법)</a></li>
-	<li><a href ="3.html"> Attribute (속성)</a></li>
-</ol>
 
-<h1>Tag (문법)</h1>
+<h1><a href ="index.html">공부해봅시닷</a></h1>
 
-<h2>TAG(문법)</h2>
-<h3><strong>1.strong: 진하게</strong><br>
-<u>2.u: 밑줄(underline)</u><br>
-3.h: 제목
-<h4>  This is heading 4</h4>
-<h5>  This is heading 5</h5>
-<h6>  This is heading 6</h6>
-<br>4.br: 줄바꿈(단순 줄바꿈, 열리는 TAG는 있지만 닫지 않음!)
-<p> 5.p: 줄바꿈 (단락으로 줄바꿔줌. 단, 줄바꿈의 여백이 정해져 있어서 여러 줄을 띄울 수 없음 ->그래서 CSS 사용)</p>
-
-<p>This is a paragraph.</p>
-<p>This is another paragraph.</p>
-
-<p>This is a paragraph.</p>
-<p style ="margin-top:40px;">This is another paragraph.</p>
-<br> 6.li : 목차에 쓸 수 있는 tag (list) br 대신!
-</h3>
-<h3>속성(Attribute)</h3>
-사진 넣는 법: img <br>
-<img src="coding.jpg" width="400">
-<br>속성 -> src="coding.jpg", width="400"
-
-<h3>부모,자식 관계</h3>
-목차의 li tag의 부모함수 ul tag 로 묶어줘 (unordered list)
-
-<h3>목차의 숫자 자동 입력</h3>
-ol : ul을 ol로 바꿔  (ordered list)<br>
-
-<ul>
-<li> html 기초</li>
-<li> Tag (문법) </li>
-<li> Attribute (속성) </li>
-</ul>
-
-<ol>
-<li> html 기초</li>
-<li> Tag (문법) </li>
-<li> Attribute (속성) </li>
-</ol>
-
-<h3>제목 (title tag)</h3>
-웹페이지의 제목을 명시적으로 알려줘 <br>
-검색엔진은 title을 표시로 인식 <br>
-
-title은 head tag로 묶어줘 <br>
-본문은 body 로 묶어줘 <br>
-
-이 모든걸 묶는 tag가 html <br>
-맨위에는 "<!doctype html>" 추가  <br>
-
-<html>
-	<head>
-		<title></title>
-	</head>
-	<body>
-	</body>
-</html>
-
-<h3>한글이 깨지면?</h3>
-파일을 UTF-8 상태로 저장된 상태이기 때문에, 웹브라우저가 열때도 UTF-8로 열도록 요청 <br>
-"<meta charset ="utf-8">"
-
-<h3>링크 추가하기</h3>
-<a href ="https://www.w3.org/TR/2010/WD-html5-20100624/" target ="blank" title="툴팁이야"> a : 원하는 곳에 a로 감싸 </a><br>
-- href : hypertext(link) reference (참고해)<br>
-- target ="blank" : 새 페이지로 링크 열기 <br>
-- 툴팁 : title ="설명 내용" <br>
-
+<div id="grid">
+	<ol>
+		<li><a href ="1.html"> HTML 기초</a></li>
+		<li><a href ="2.html" style="color:rgb(224,43,100);text-decoration: underline;"> Tag(문법)</a></li>
+		<li><a href ="3.html"> 반응형 쿼리</a></li>
+		<li><a href ="css1.html"> CSS 기초</a></li>
+	</ol>
+	
+	<div id="article">
+		<h2>TAG(문법)</h2>
+		<h3><strong>1.strong: 진하게</strong><br>
+		<u>2.u: 밑줄(underline)</u><br>
+		3.h: 제목
+		<h4>  This is heading 4</h4>
+		<h5>  This is heading 5</h5>
+		<h6>  This is heading 6</h6>
+		<br>4.br: 줄바꿈(단순 줄바꿈, 열리는 TAG는 있지만 닫지 않음!)
+		<p> 5.p: 줄바꿈 (단락으로 줄바꿔줌. 단, 줄바꿈의 여백이 정해져 있어서 여러 줄을 띄울 수 없음 ->그래서 CSS 사용)</p>
+		
+		<p>This is a paragraph.</p>
+		<p>This is another paragraph.</p>
+		
+		<p>This is a paragraph.</p>
+		<p style ="margin-top:40px;">This is another paragraph.</p>
+		<br> 6.li : 목차에 쓸 수 있는 tag (list) br 대신!
+		</h3>
+		<h3>속성(Attribute)</h3>
+		사진 넣는 법: img <br>
+		<img src="coding.jpg" width="400">
+		<br>속성 -> src="coding.jpg", width="400"
+		
+		<h3>부모,자식 관계</h3>
+		목차의 li tag의 부모함수 ul tag 로 묶어줘 (unordered list)
+		
+		<h3>목차의 숫자 자동 입력</h3>
+		ol : ul을 ol로 바꿔  (ordered list)<br>
+		
+		<ul>
+		<li> html 기초</li>
+		<li> Tag (문법) </li>
+		<li> Attribute (속성) </li>
+		</ul>
+		
+		<ol>
+		<li> html 기초</li>
+		<li> Tag (문법) </li>
+		<li> Attribute (속성) </li>
+		</ol>
+		
+		<h3>제목 (title tag)</h3>
+		웹페이지의 제목을 명시적으로 알려줘 <br>
+		검색엔진은 title을 표시로 인식 <br>
+		
+		title은 head tag로 묶어줘 <br>
+		본문은 body 로 묶어줘 <br>
+		
+		이 모든걸 묶는 tag가 html <br>
+		맨위에는 "<!doctype html>" 추가  <br>
+		
+		<html>
+			<head>
+				<title></title>
+			</head>
+			<body>
+			</body>
+		</html>
+		
+		<h3>한글이 깨지면?</h3>
+		파일을 UTF-8 상태로 저장된 상태이기 때문에, 웹브라우저가 열때도 UTF-8로 열도록 요청 <br>
+		"<meta charset ="utf-8">"
+		
+		<h3>링크 추가하기</h3>
+		<a href ="https://www.w3.org/TR/2010/WD-html5-20100624/" target ="blank" title="툴팁이야"> a : 원하는 곳에 a로 감싸 </a><br>
+		- href : hypertext(link) reference (참고해)<br>
+		- target ="blank" : 새 페이지로 링크 열기 <br>
+		- 툴팁 : title ="설명 내용" <br>
+	</div>
+</div>
 </body>
 </html>
 

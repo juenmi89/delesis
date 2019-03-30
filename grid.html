@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+	<head>
+	<meta charset="utf-8">
+		<title></title>
+		<style>
+			div{
+				border:gray solid 4px;
+			}
+			#grid{
+				border:pink solid 4px;
+				display:grid;
+				grid-template-columns: 150px 1fr;
+				/*fr : 여백을 전체 쓰도록 자동으로 조정되는 단위 (유동적 크기). 만약 2fr 1fr 이라면 총 3fr 로 보고 자동으로 나눠져*/
+			}
+		</style>
+	</head>
+	<body>
+<ol>
+	<li><a href ="1.html"> HTML 기초</a></li>
+	<li><a href ="css1.html"> CSS 기초</a></li>
+	<li><a href ="box.html"> 테두리 사용</a></li>
+	<li><a href ="grid.html" style="color:red;text-decoration: underline;"> grid 사용</a></li>
+	<li><a href ="mediaquery.html"> 반응형쿼리</a></li>
+	<li><a href ="style.css"> style.css</a></li>
+	
+</ol>	
+		<div id="grid">
+			<div>NAVIGATION</div>
+			<div>리눅스는 단 하나의 제품 또는 한 종류의 제품군만 있는 것이 아닙니다. 리눅스는 그 소스가 공개(Open)되어 있기 때문에 누구나 소스를 수정하여 사용할 수 있으며, 또한 이로 인해 많은 종류의 변형들이 존재합니다. 특수한 목적으로 개발된 임베디드(Embeded) 디바이스에 적용된 리눅스부터, 일반 사용자를 위해 만들어진 PC 또는 노트북과 같은 하드웨어에 사용할 수 있는 리눅스까지, 많은 종류의 리눅스 운영체제가 존재하죠.
+
+</div>	
+		</div>
+		
+		<br><h3>** div : 아무 의미가 없고, 디자인을 위한 tag 용도 (block element)</h3> <br>
+		<!-- 
+		<div>NAVIGATION</div>
+		<div>ARTICLE</div>
+		 -->
+		<br> <h3>** span : div와 동일하지만 inline element 임! </h3><br>
+		<!--
+		<span>NAVIGATION</span>
+		<span>ARTICLE</span>		
+		-->	
+		<h3>두개의 단어를 나란히 두고 싶어 </h3>
+		0. 현재
+		<br><img src="C:\Users\단비\Downloads\준미\web\cap3.jpg" width="500px"><br>
+		<br>1. 부모 tag 로 묶어줘 <br>
+		<!-- 
+		<div id="grid">
+			<div>NAVIGATION</div>
+			<div>ARTICLE</div>
+		</div>	
+		 -->
+		<br>2. grid 설정<br>
+		<!-- 
+		display:grid;
+		grid-template-columns: 150px 1fr;
+		 -->
+		<br>** fr : 여백을 전체 쓰도록 자동으로 조정되는 단위 (유동적 크기). 만약 2fr 1fr 이라면 총 3fr 로 보고 자동으로 나눠져<br>
+		<br><img src="C:\Users\단비\Downloads\준미\web\cap4.jpg" width="500px"><br>
+		
+		<br>3. article 부분에 아무 글이나 넣어봐!<br>
+		navigation 부분은 고정값이니까 그대로이지만, article 부분은 자동으로 늘어나
+		<br><img src="C:\Users\단비\Downloads\준미\web\cap5.jpg" width="500px"><br>
+		
+		<h3>CSS 기능을 사용해도 되는지 여부를 확인할 필요가 있음</h3>
+		caniuse.com<br>
+		웹 브라우저가 css기능을 얼마나 활용하고 있는지 통계적으로 알려줌
+		
+	</body>
+</html>
